@@ -22,6 +22,12 @@ This project is made to help SOC MSSP teams that use QRadar with multiple client
     - [filter sample](./logstash/conf.d/0020-filter.conf)
     - [output sample](./logstash/conf.d/0030-output.conf)
 4. Create a `/home/USER/Offenses/` folder to save the extracted search data from QRadar in CSV.
+5. Create the following scripted fields in Kibana
+
+| Name                | Lang     | Script                                  | Format |
+| ------------------- | -------- | --------------------------------------- | :----- |
+| offense.day_of_week | painless | `doc['@timestamp'].value.dayOfWeekEnum` | String |
+| offense.hour_of_day | painless | `doc['@timestamp'].value.hourOfDay`     | Number |
 
 ### Tasks
 - [ ] Adding more AQL queries and searches
