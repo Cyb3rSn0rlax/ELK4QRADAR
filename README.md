@@ -3,7 +3,7 @@ This project is made to help SOC MSSP teams that use QRadar with multiple client
 ![Diagram](./images/ELK4QRADAR.png)
 
 ### Steps
-1. PUT _template/<YOUR_TEMPLATE_NAME>. In this repository we provide an index template that you can in your Elastic Stack
+1. `PUT _template/<YOUR_TEMPLATE_NAME>`. In this repository we provide an index template that you can in your Elastic Stack
 2. Populate the YAML files in /etc/logstash with the appropriate data to your context. We Provide samples in this project: 
     - [timezone.yml](./logstash/timezone.yml): Contains dictionary of client name and their correspondant timezones.
     - [clientnames.yml](./logstash/clientnames.yml) : Contains a dictionary of input configuration tags and their correspondant client names
