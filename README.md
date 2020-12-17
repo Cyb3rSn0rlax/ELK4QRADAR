@@ -3,13 +3,16 @@ This project is made to help SOC MSSP teams that use QRadar with multiple client
 ![Diagram](./images/ELK4QRADAR.png)
 
 ### Metrics samples
-1. Busiest Days
+1. ***Busiest Days**
+
 ![BusiestDays](./images/BusiestDays.png)
 
-2. Busiest Hours
+2. **Busiest Hours**
+
 ![BusiestHours](./images/BusiestHours.png)
 
-2. Offenses average by day of week
+2. **Offenses average by day of week**
+
 ![DayofthWeek_by_Offense_avg](./images/DayofthWeek_by_Offense_avg.png)
 
 ### Steps
