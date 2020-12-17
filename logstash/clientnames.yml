@@ -1,0 +1,4 @@
+#"[tags]" : "[client][name]"
+
+"MY_CLIENT_in_TAG" : "CLIENT1"
+"My_CLIENT_in_TAG" : "CLIENT2"

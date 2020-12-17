@@ -1,0 +1,4 @@
+#"[client][name]" : "timezone"
+
+"CLIENT1" : "Etc/GMT-1"
+"CLIENT2" : "Africa/Casablanca"
