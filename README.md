@@ -2,7 +2,7 @@
 This project is made to help SOC MSSP teams that use QRadar with multiple clients to collecte and centralize monitoring statistics from all QRadar deployments. 
 ![Diagram](./images/ELK4QRADAR.png)
 
-### Visulaizations samples
+### Metrics samples
 1. Busiest Days
 ![BusiestDays](./images/BusiestDays.png)
 
