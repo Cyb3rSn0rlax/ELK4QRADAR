@@ -1,0 +1,171 @@
+{
+    "index_patterns": [
+        "soc-statistics-offenses-*"
+    ],
+    "template": {
+        "settings": {
+            "number_of_shards": 1,
+            "number_of_replicas": 0
+        },
+        "mappings": {
+            "dynamic_templates": [
+                {
+                    "strings_as_keyword": {
+                        "mapping": {
+                            "ignore_above": 1024,
+                            "type": "keyword"
+                        },
+                        "match_mapping_type": "string"
+                    }
+                }
+            ],
+            "properties": {
+                "@timestamp": {
+                    "type": "date"
+                },
+                "offense": {
+                    "properties": {
+                        "owner": {
+                            "type": "keyword"
+                        },
+                        "note": {
+                            "properties": {
+                                "date": {
+                                    "format": "MMM d, yyyy, h:mm:ss a",
+                                    "type": "date"
+                                }
+                            }
+                        },
+                        "storagetime": {
+                            "format": "yyyy-MM-dd hh:mm:ss a",
+                            "type": "date"
+                        },
+                        "assigned": {
+                            "properties": {
+                                "date": {
+                                    "format": "MMM d, yyyy, h:mm:ss a",
+                                    "type": "date"
+                                }
+                            }
+                        },
+                        "id": {
+                            "type": "keyword"
+                        },
+                        "starttime": {
+                            "format": "yyyy-MM-dd hh:mm:ss a",
+                            "type": "date"
+                        },
+                        "logsourcetime": {
+                            "format": "yyyy-MM-dd hh:mm:ss a",
+                            "type": "date"
+                        },
+                        "close": {
+                            "properties": {
+                                "date": {
+                                    "format": "MMM d, yyyy, h:mm:ss a",
+                                    "type": "date"
+                                },
+                                "reason": {
+                                    "type": "text"
+                                },
+                                "analyst": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "hour_of_day": {
+                            "type": "keyword"
+                        },
+                        "status": {
+                            "type": "keyword"
+                        },
+                        "day_of_week": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "domain": {
+                    "properties": {
+                        "name": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "rule": {
+                    "properties": {
+                        "severity": {
+                            "type": "keyword"
+                        },
+                        "risk_score": {
+                            "type": "keyword"
+                        },
+                        "name": {
+                            "type": "keyword"
+                        },
+                        "threat": {
+                            "properties": {
+                                "technique": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "keyword"
+                                        },
+                                        "id": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "tactic": {
+                                    "properties": {
+                                        "name": {
+                                            "type": "keyword"
+                                        },
+                                        "id": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "category": {
+                            "type": "keyword"
+                        },
+                        "class": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "client": {
+                    "properties": {
+                        "name": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "analyst": {
+                    "type": "nested",
+                    "properties": {
+                        "notes": {
+                            "type": "text"
+                        },
+                        "username": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "event": {
+                    "properties": {
+                        "timezone": {
+                            "type": "keyword"
+                        },
+                        "name": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "tags": {
+                    "type": "keyword"
+                }
+            }
+        }
+    }
+}
