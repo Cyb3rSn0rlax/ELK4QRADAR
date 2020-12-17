@@ -2,19 +2,6 @@
 This project is made to help SOC MSSP teams that use QRadar with multiple clients to collecte and centralize monitoring statistics from all QRadar deployments. 
 ![Diagram](./images/ELK4QRADAR.png)
 
-### Metrics samples
-1. ***Busiest Days**
-
-![BusiestDays](./images/BusiestDays.png)
-
-2. **Busiest Hours**
-
-![BusiestHours](./images/BusiestHours.png)
-
-2. **Offenses average by day of week**
-
-![DayofthWeek_by_Offense_avg](./images/DayofthWeek_by_Offense_avg.png)
-
 ### Steps
 1. `PUT _template/<YOUR_TEMPLATE_NAME>`. In this repository we provide an index template that you can in your Elastic Stack
 2. Populate the YAML files in /etc/logstash with the appropriate data to your context. We Provide samples in this project: 
@@ -31,6 +18,19 @@ This project is made to help SOC MSSP teams that use QRadar with multiple client
 | ------------------- | -------- | --------------------------------------- | :----- |
 | offense.day_of_week | painless | `doc['@timestamp'].value.dayOfWeekEnum` | String |
 | offense.hour_of_day | painless | `doc['@timestamp'].value.hourOfDay`     | Number |
+
+### Metrics samples
+1. **Busiest Days**
+
+![BusiestDays](./images/BusiestDays.png)
+
+2. **Busiest Hours**
+
+![BusiestHours](./images/BusiestHours.png)
+
+2. **Offenses average by day of week**
+
+![DayofthWeek_by_Offense_avg](./images/DayofthWeek_by_Offense_avg.png)
 
 ### Tasks
 - [ ] Adding more AQL queries and searches
