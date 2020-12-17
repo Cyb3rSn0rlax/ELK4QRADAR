@@ -16,3 +16,4 @@ This project is made to help SOC MSSP teams that use QRadar with multiple client
 ### Tasks
 - [ ] Adding more AQL queries and searches
 - [ ] Automating the collectiong process
+- [ ] Moving from CSV -> JSON data format
